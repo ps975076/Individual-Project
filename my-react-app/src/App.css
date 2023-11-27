@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111111;
+  /* min-height: 100vh; */
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 150px 1fr 400px;
+  gap: 2px;
+}
+
+.header {
+  grid-area: header;
+  border: 1px dashed black;
+  display: grid;
+  grid-template:
+    "menu-container"
+    "navBar-container";
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  padding: 2px;
+}
+
+.menu-container {
+  grid-area: menu-container;
+  border: 1px dashed black;
+  display: grid;
+  grid-template: "empty find help join signin";
+  grid-template-columns: 1fr repeat(4, auto);
+  gap: 2px;
+  padding: 2px;
+  font-weight: 600;
+}
+
+.empty {
+  grid-area: empty;
+  border: 1px dashed black;
+}
+
+.find {
+  grid-area: find;
+  /* border: 1px dashed black; */
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.help {
+  grid-area: help;
+  /* border: 1px dashed black; */
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.join {
+  grid-area: join;
+  /* border: 1px dashed black; */
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.signin {
+  grid-area: signin;
+  /* border: 1px dashed black; */
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.navBar-container {
+  grid-area: navBar-container;
+  border: 1px dashed black;
+}
+
+.main {
+  grid-area: main;
+  border: 1px dashed black;
+}
+
+.footer {
+  grid-area: footer;
+  border: 1px dashed black;
+  /* margin-top: auto; */
+}
