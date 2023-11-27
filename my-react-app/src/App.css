@@ -6,12 +6,7 @@
 body {
   background-color: #ffffff;
   color: #111111;
-  /* min-height: 100vh; */
   font-family: "Roboto", sans-serif;
-}
-
-img {
-  width: 50px;
 }
 
 .container {
@@ -45,16 +40,16 @@ img {
   gap: 2px;
   padding: 2px;
   font-weight: 600;
+  background-color: rgb(221, 220, 220);
 }
 
 .empty {
   grid-area: empty;
-  border: 1px dashed black;
+  margin-right: 10px;
 }
 
 .find {
   grid-area: find;
-  /* border: 1px dashed black; */
   display: grid;
   justify-items: end;
   align-items: center;
@@ -63,7 +58,6 @@ img {
 
 .help {
   grid-area: help;
-  /* border: 1px dashed black; */
   display: grid;
   justify-items: end;
   align-items: center;
@@ -72,7 +66,6 @@ img {
 
 .join {
   grid-area: join;
-  /* border: 1px dashed black; */
   display: grid;
   justify-items: end;
   align-items: center;
@@ -81,7 +74,6 @@ img {
 
 .signin {
   grid-area: signin;
-  /* border: 1px dashed black; */
   display: grid;
   justify-items: end;
   align-items: center;
@@ -91,6 +83,66 @@ img {
 .navBar-container {
   grid-area: navBar-container;
   border: 1px dashed black;
+  display: grid;
+  grid-template: "logo navigation searchBar favs cart";
+  grid-template-columns: 100px 1fr 250px 70px 70px;
+  gap: 2px;
+  padding: 2px;
+}
+
+.logo {
+  grid-area: logo;
+  border: 1px dashed black;
+  display: grid;
+  place-content: center;
+}
+
+.logo > img {
+  width: 60px;
+}
+
+.navigation {
+  grid-area: navigation;
+  border: 1px dashed black;
+}
+
+.searchBar {
+  grid-area: searchBar;
+  border: 1px dashed black;
+  display: grid;
+}
+
+.searchBar > input {
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 20px;
+  width: 170px;
+  height: 40px;
+  margin-left: 35px;
+  margin-top: 13px;
+  background-color: rgb(221, 220, 220);
+  border: none;
+}
+
+.searchBar > input::placeholder {
+  font-size: 18px;
+  color: grey;
+  padding-left: 50px;
+  padding-top: 5px;
+}
+
+.favs {
+  grid-area: favs;
+  border: 1px dashed black;
+  display: grid;
+  place-items: center;
+}
+
+.cart {
+  grid-area: cart;
+  border: 1px dashed black;
+  display: grid;
+  place-items: center;
 }
 
 .main {
