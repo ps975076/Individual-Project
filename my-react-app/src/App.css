@@ -153,5 +153,4 @@ body {
 .footer {
   grid-area: footer;
   border: 1px dashed black;
-  /* margin-top: auto; */
 }
