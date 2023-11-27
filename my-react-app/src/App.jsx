@@ -29,7 +29,20 @@ function App() {
                 alt="logo"
               />
             </div>
-            <div className="navigation"></div>
+            <div className="navigation">
+              <div className="men">
+                <p>Men</p>
+              </div>
+              <div className="women">
+                <p>Women</p>
+              </div>
+              <div className="kids">
+                <p>Kids</p>
+              </div>
+              <div className="sale">
+                <p>Sale</p>
+              </div>
+            </div>
             <div className="searchBar">
               <input className="searchInput" type="text" placeholder="Search" />
             </div>

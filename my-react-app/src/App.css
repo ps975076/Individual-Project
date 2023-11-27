@@ -88,13 +88,12 @@ body {
   grid-template-columns: 100px 1fr 250px 70px 70px;
   gap: 2px;
   padding: 2px;
+  place-items: center;
 }
 
 .logo {
   grid-area: logo;
-  border: 1px dashed black;
   display: grid;
-  place-content: center;
 }
 
 .logo > img {
@@ -103,12 +102,35 @@ body {
 
 .navigation {
   grid-area: navigation;
-  border: 1px dashed black;
+  display: grid;
+  grid-template: "men women kids sale";
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 20px;
+  place-items: center;
+  margin-left: 60px;
+  font-size: 18px;
+}
+
+.men {
+  grid-area: men;
+}
+
+.women {
+  grid-area: women;
+}
+
+.kids {
+  grid-area: kids;
+}
+
+.sale {
+  grid-area: sale;
+  margin-right: 9px;
 }
 
 .searchBar {
   grid-area: searchBar;
-  border: 1px dashed black;
   display: grid;
 }
 
@@ -118,8 +140,6 @@ body {
   border-radius: 20px;
   width: 170px;
   height: 40px;
-  margin-left: 35px;
-  margin-top: 13px;
   background-color: rgb(221, 220, 220);
   border: none;
 }
@@ -133,16 +153,15 @@ body {
 
 .favs {
   grid-area: favs;
-  border: 1px dashed black;
   display: grid;
   place-items: center;
 }
 
 .cart {
   grid-area: cart;
-  border: 1px dashed black;
   display: grid;
   place-items: center;
+  margin-right: 50px;
 }
 
 .main {
