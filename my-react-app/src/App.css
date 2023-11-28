@@ -15,7 +15,8 @@ body {
     "header"
     "main"
     "footer";
-  grid-template-rows: 150px 1fr 400px;
+  grid-template-rows: 150px 100% 100px;
+
   gap: 2px;
 }
 
@@ -29,6 +30,8 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 2px;
   padding: 2px;
+  height: 100%;
+  width: 100%;
 }
 
 .menu-container {
@@ -167,9 +170,65 @@ body {
 .main {
   grid-area: main;
   border: 1px dashed black;
+  display: grid;
+  grid-template: "empty-left-col main-content-col empty-right-col";
+  grid-template-columns: 100px 100% 100px;
+  gap: 2px;
+  padding: 2px;
+  width: 100%;
+}
+
+.empty-left-col {
+  grid-area: empty-left-col;
+  border: 1px dashed black;
+}
+
+.main-content-col {
+  grid-area: main-content-col;
+  border: 1px dashed black;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, 450px);
+  gap: 2px;
+  padding: 2px;
+}
+
+.product {
+  display: grid;
+  grid-template:
+    "product-img"
+    "product-des"
+    "product-price";
+  grid-template-rows: 1fr 90px 30px;
+
+  padding: 2px;
+  gap: 2px;
+  border: 1px dashed black;
+}
+
+.product-img {
+  grid-area: product-img;
+  border: 1px dashed black;
+}
+
+.product-des {
+  grid-area: product-des;
+  border: 1px dashed black;
+}
+
+.product-price {
+  grid-area: product-price;
+  border: 1px dashed black;
+}
+
+.empty-right-col {
+  grid-area: empty-right-col;
+  border: 1px dashed black;
 }
 
 .footer {
   grid-area: footer;
   border: 1px dashed black;
+  height: 100%;
+  width: 100%;
 }

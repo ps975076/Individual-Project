@@ -24,10 +24,7 @@ function App() {
           </div>
           <nav className="navBar-container">
             <div className="logo">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/800px-Logo_NIKE.svg.png"
-                alt="logo"
-              />
+              <img src="/src/assets/logo.png" alt="logo" />
             </div>
             <div className="navigation">
               <div className="men">
@@ -55,7 +52,62 @@ function App() {
           </nav>
         </header>
         {/* MAIN */}
-        <main className="main">main</main>
+        <main className="main">
+          <div className="empty-left-col">EMPTY</div>
+          <div className="main-content-col">
+            <div className="product">
+              <div className="product-img">IMG</div>
+              <div className="product-des">DES</div>
+              <div className="product-price">PRICE</div>
+            </div>
+            <div className="product">
+              <div className="product-img">IMG</div>
+              <div className="product-des">DES</div>
+              <div className="product-price">PRICE</div>
+            </div>
+            <div className="product">
+              <div className="product-img">IMG</div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des">DES</div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+            <div className="product">
+              <div className="product-img"></div>
+              <div className="product-des"></div>
+              <div className="product-price"></div>
+            </div>
+          </div>
+          <div className="empty-right-col">EMPTY</div>
+        </main>
         {/* FOOTER */}
         <footer className="footer">footer</footer>
       </div>
