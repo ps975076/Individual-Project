@@ -15,7 +15,7 @@ body {
     "header"
     "main"
     "footer";
-  grid-template-rows: 150px 100% 100px;
+  grid-template-rows: 150px 100% 200px;
 
   gap: 2px;
 }
@@ -172,7 +172,7 @@ body {
   border: 1px dashed black;
   display: grid;
   grid-template: "empty-left-col main-content-col empty-right-col";
-  grid-template-columns: 100px 100% 100px;
+  grid-template-columns: 100px 1fr 100px;
   gap: 2px;
   padding: 2px;
   width: 100%;
@@ -188,8 +188,8 @@ body {
   border: 1px dashed black;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, 450px);
-  gap: 2px;
+  grid-template-rows: repeat(auto-fit, 350px);
+  gap: 10px;
   padding: 2px;
 }
 
@@ -229,6 +229,4 @@ body {
 .footer {
   grid-area: footer;
   border: 1px dashed black;
-  height: 100%;
-  width: 100%;
 }

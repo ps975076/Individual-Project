@@ -95,16 +95,6 @@ function App() {
               <div className="product-des">DES</div>
               <div className="product-price"></div>
             </div>
-            <div className="product">
-              <div className="product-img"></div>
-              <div className="product-des"></div>
-              <div className="product-price"></div>
-            </div>
-            <div className="product">
-              <div className="product-img"></div>
-              <div className="product-des"></div>
-              <div className="product-price"></div>
-            </div>
           </div>
           <div className="empty-right-col">EMPTY</div>
         </main>
