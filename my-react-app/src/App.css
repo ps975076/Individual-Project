@@ -43,7 +43,8 @@ body {
   gap: 2px;
   padding: 2px;
   font-weight: 600;
-  background-color: rgb(221, 220, 220);
+  color: #ffffffcc;
+  background-color: #111111;
 }
 
 .empty {
@@ -236,9 +237,11 @@ body {
   grid-template:
     "footer-con"
     "rights";
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 250px 1fr;
   padding: 12px;
   gap: 2px;
+  color: #ffffffcc;
+  background-color: #111111;
 }
 
 .footer-con {
@@ -247,6 +250,7 @@ body {
   display: grid;
   grid-template: "footer-help about contact";
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 230px;
   padding: 12px;
   gap: 10px;
 }
@@ -254,25 +258,42 @@ body {
 .footer-help {
   grid-area: footer-help;
   border: 1px dashed black;
+  color: #ffffffcc;
+  background-color: #111111;
 }
 
-.footer-help > p {
-  margin-bottom: 100px;
-  margin-right: 350px;
-  font-size: 15px;
+.footer-help > p + p {
+  margin-top: 15px;
 }
 
 .about {
   grid-area: about;
   border: 1px dashed black;
+  color: #ffffffcc;
+  background-color: #111111;
+}
+
+.about > p + p {
+  margin-top: 15px;
 }
 
 .contact {
   grid-area: contact;
   border: 1px dashed black;
+  color: #ffffffcc;
+  background-color: #111111;
+}
+
+.contact > p + p {
+  margin-top: 15px;
 }
 
 .rights {
   grid-area: rights;
-  border: 1px dashed black;
+
+  background-color: grey;
+}
+
+.rights > p {
+  margin-left: 15px;
 }
