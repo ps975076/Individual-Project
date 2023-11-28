@@ -22,7 +22,6 @@ body {
 
 .header {
   grid-area: header;
-  border: 1px dashed black;
   display: grid;
   grid-template:
     "menu-container"
@@ -36,7 +35,6 @@ body {
 
 .menu-container {
   grid-area: menu-container;
-  border: 1px dashed black;
   display: grid;
   grid-template: "empty find help join signin";
   grid-template-columns: 1fr repeat(4, auto);
@@ -58,6 +56,7 @@ body {
   justify-items: end;
   align-items: center;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .help {
@@ -66,6 +65,7 @@ body {
   justify-items: end;
   align-items: center;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .join {
@@ -74,6 +74,7 @@ body {
   justify-items: end;
   align-items: center;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .signin {
@@ -82,17 +83,18 @@ body {
   justify-items: end;
   align-items: center;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .navBar-container {
   grid-area: navBar-container;
-  border: 1px dashed black;
   display: grid;
   grid-template: "logo navigation searchBar favs cart";
   grid-template-columns: 100px 1fr 250px 70px 70px;
   gap: 2px;
   padding: 2px;
   place-items: center;
+  border-bottom: 1px solid grey;
 }
 
 .logo {
@@ -102,6 +104,7 @@ body {
 
 .logo > img {
   width: 60px;
+  cursor: pointer;
 }
 
 .navigation {
@@ -118,19 +121,34 @@ body {
 
 .men {
   grid-area: men;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .women {
   grid-area: women;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .kids {
   grid-area: kids;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .sale {
   grid-area: sale;
   margin-right: 9px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.men:hover,
+.women:hover,
+.kids:hover,
+.sale:hover {
+  text-decoration: underline;
 }
 
 .searchBar {
@@ -159,6 +177,7 @@ body {
   grid-area: favs;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .cart {
@@ -166,11 +185,11 @@ body {
   display: grid;
   place-items: center;
   margin-right: 50px;
+  cursor: pointer;
 }
 
 .main {
   grid-area: main;
-  border: 1px dashed black;
   display: grid;
   grid-template: "empty-left-col main-content-col empty-right-col";
   grid-template-columns: 100px 1fr 100px;
@@ -181,16 +200,14 @@ body {
 
 .empty-left-col {
   grid-area: empty-left-col;
-  border: 1px dashed black;
   background-color: rgb(221, 220, 220);
 }
 
 .main-content-col {
   grid-area: main-content-col;
-  border: 1px dashed black;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, 400px);
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
   padding: 2px;
 }
@@ -225,7 +242,6 @@ body {
 
 .empty-right-col {
   grid-area: empty-right-col;
-  border: 1px dashed black;
   background-color: rgb(221, 220, 220);
 }
 
@@ -296,4 +312,5 @@ body {
 
 .rights > p {
   margin-left: 15px;
+  margin-top: 2px;
 }

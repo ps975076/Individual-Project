@@ -53,7 +53,7 @@ function App() {
         </header>
         {/* MAIN */}
         <main className="main">
-          <div className="empty-left-col">EMPTY</div>
+          <div className="empty-left-col"></div>
           <div className="main-content-col">
             <div className="product">
               <div className="product-img">IMG</div>
@@ -96,7 +96,7 @@ function App() {
               <div className="product-price"></div>
             </div>
           </div>
-          <div className="empty-right-col">EMPTY</div>
+          <div className="empty-right-col"></div>
         </main>
         {/* FOOTER */}
         <footer className="footer">
