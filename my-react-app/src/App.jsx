@@ -99,7 +99,18 @@ function App() {
           <div className="empty-right-col">EMPTY</div>
         </main>
         {/* FOOTER */}
-        <footer className="footer">footer</footer>
+        <footer className="footer">
+          <div className="footer-con">
+            <div className="footer-help">
+              <p>
+                <strong>HELP &#38; INFORMATION</strong>
+              </p>
+            </div>
+            <div className="about"></div>
+            <div className="contact"></div>
+          </div>
+          <div className="rights"></div>
+        </footer>
       </div>
     </>
   );
