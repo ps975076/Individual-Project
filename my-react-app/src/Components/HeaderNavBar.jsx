@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function HeaderNavBar() {
   return (
     <header className="header">
@@ -17,9 +18,9 @@ function HeaderNavBar() {
         </div>
       </div>
       <nav className="navBar-container">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src="/src/assets/logo.png" alt="logo" />
-        </div>
+        </Link>
         <div className="navigation">
           <div className="men">
             <p>Men</p>
@@ -40,9 +41,9 @@ function HeaderNavBar() {
         <div className="favs">
           <img src="/src/assets/heart-svgrepo-com (3).svg" alt="favs" />
         </div>
-        <div className="cart">
+        <Link to="/cart" className="cart">
           <img src="/src/assets/shopping-bag-svgrepo-com.svg" alt="" />
-        </div>
+        </Link>
       </nav>
     </header>
   );

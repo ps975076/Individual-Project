@@ -2,9 +2,12 @@
 import { useEffect } from "react";
 import React, { useState } from "react";
 import "./App.css";
-import Footer from "./Pages/Components/Footer";
-import HeaderNavBar from "./Pages/Components/HeaderNavBar";
-import MainContent from "./Pages/Components/MainContent";
+import Footer from "./Components/Footer";
+import HeaderNavBar from "./Components/HeaderNavBar";
+import MainContent from "./Components/MainContent";
+import Cart from "./Pages/Cart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DetailsPage from "./Pages/DetailsPage";
 
 function App() {
   // 1. Create state for products
@@ -26,13 +29,18 @@ function App() {
   };
 
   return (
-    <>
-      <div className="container">
+    <div className="container">
+      <BrowserRouter>
         <HeaderNavBar />
-        <MainContent products={products} />
+
+        <Routes>
+          <Route path="/" element={<MainContent products={products} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/details/:id" element={<DetailsPage />} />
+        </Routes>
         <Footer />
-      </div>
-    </>
+      </BrowserRouter>
+    </div>
   );
 }
 
