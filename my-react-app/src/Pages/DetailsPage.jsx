@@ -5,6 +5,10 @@ function DetailsPage() {
   const { id } = useParams();
   const [productDetails, setProductDetails] = useState({});
 
+  const handleAddToBag = () => {
+    console.log("clicked");
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -30,7 +34,8 @@ function DetailsPage() {
             <h1>{productDetails.title}</h1>
             <p>Description: {productDetails.description}</p>
             <p>Price: ${productDetails.price}</p>
-            <button>Add to Bag</button>
+
+            <button onClick={handleAddToBag}>Add to Bag</button>
           </div>
         </div>
       </div>

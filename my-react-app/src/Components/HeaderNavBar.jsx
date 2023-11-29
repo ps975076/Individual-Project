@@ -29,10 +29,10 @@ function HeaderNavBar() {
             <p>Women</p>
           </div>
           <div className="kids">
-            <p>Kids</p>
+            <p>Electronics</p>
           </div>
           <div className="sale">
-            <p>Sale</p>
+            <p>Jewellery</p>
           </div>
         </div>
         <div className="searchBar">

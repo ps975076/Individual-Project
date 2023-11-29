@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function MainContent({ products }) {
+  const handleAddToBag = () => {
+    console.log("clicked");
+  };
   return (
     <main className="main">
       <div className="empty-left-col"></div>
@@ -13,8 +16,12 @@ function MainContent({ products }) {
             </Link>
             <div className="product-info">
               <p>{product.title}</p>
-              <p>Price: ${product.price}</p>
-              <button>Add to Bag</button>
+              <p>
+                <strong>Price: ${product.price.toFixed(2)}</strong>
+              </p>
+              <Link to="/cart">
+                <button onClick={handleAddToBag}>Add to Bag</button>
+              </Link>
             </div>
           </div>
         ))}

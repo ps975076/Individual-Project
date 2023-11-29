@@ -215,7 +215,7 @@ body {
   flex-direction: column;
   padding: 5px;
   gap: 2px;
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 5px;
   width: 200px;
 }
@@ -243,6 +243,7 @@ button {
   cursor: pointer;
   padding: 10px;
   border: none;
+  width: 170px;
 }
 
 button:hover {
