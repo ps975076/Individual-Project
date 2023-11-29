@@ -16,7 +16,6 @@ body {
     "main"
     "footer";
   grid-template-rows: 150px 100% 300px;
-
   gap: 2px;
 }
 
@@ -219,10 +218,10 @@ body {
     "product-des"
     "product-price";
   grid-template-rows: 1fr 90px 50px;
-
-  padding: 2px;
+  padding: 5px;
   gap: 2px;
-  border: 1px dashed black;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .product-img {
@@ -249,14 +248,14 @@ body {
   height: 30px;
   border-radius: 30px;
   background-color: #111111;
-  color: #ffffff;
+  color: rgb(181, 179, 179);
   cursor: pointer;
   font-size: 15px;
   letter-spacing: 2px;
 }
 
 .addToCartBtn > button:hover {
-  color: green;
+  color: #ffffff;
 }
 
 .empty-right-col {
