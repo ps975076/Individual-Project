@@ -185,6 +185,19 @@ body {
   place-items: center;
   margin-right: 50px;
   cursor: pointer;
+  position: relative;
+}
+.cart > p {
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .main {
@@ -340,4 +353,40 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* CART */
+.cart-con {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.cart-product-img {
+  width: 100px;
+  height: 100px;
+}
+.cart-product-img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.cart-product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.counter {
+  display: flex;
+  gap: 10px;
+}
+.counter .qty {
+  width: 50px;
+}
+.count-btn {
+  max-width: 50px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
 }

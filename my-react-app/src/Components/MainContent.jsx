@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import ProductsContext from "../ContextAPI/ProductsProvider";
 
-function MainContent({ products }) {
-  const handleAddToBag = () => {
-    console.log("clicked");
-  };
+function MainContent() {
+  const { products, addToCart } = useContext(ProductsContext);
+
   return (
     <main className="main">
       <div className="empty-left-col"></div>
@@ -16,12 +16,8 @@ function MainContent({ products }) {
             </Link>
             <div className="product-info">
               <p>{product.title}</p>
-              <p>
-                <strong>Price: ${product.price.toFixed(2)}</strong>
-              </p>
-              <Link to="/cart">
-                <button onClick={handleAddToBag}>Add to Bag</button>
-              </Link>
+              <p>Price: ${product.price.toFixed(2)}</p>
+              <button onClick={() => addToCart(product)}>Add to Bag</button>
             </div>
           </div>
         ))}

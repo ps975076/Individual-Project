@@ -1,5 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import ProductsContext from "../ContextAPI/ProductsProvider";
+
 function HeaderNavBar() {
+  const { cartItems } = useContext(ProductsContext);
+
   return (
     <header className="header">
       <div className="menu-container">
@@ -42,6 +47,7 @@ function HeaderNavBar() {
           <img src="/src/assets/heart-svgrepo-com (3).svg" alt="favs" />
         </div>
         <Link to="/cart" className="cart">
+          <p>{cartItems.length}</p>
           <img src="/src/assets/shopping-bag-svgrepo-com.svg" alt="" />
         </Link>
       </nav>
