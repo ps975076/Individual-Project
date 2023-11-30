@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ProductsContext from "../ContextAPI/ProductsProvider";
 
 function DetailsPage() {
+  const { addToCart } = useContext(ProductsContext);
   const { id } = useParams();
   const [productDetails, setProductDetails] = useState({});
-
-  const handleAddToBag = () => {
-    console.log("clicked");
-  };
 
   useEffect(() => {
     fetchData();
@@ -35,7 +33,9 @@ function DetailsPage() {
             <p>Description: {productDetails.description}</p>
             <p>Price: ${productDetails.price}</p>
 
-            <button onClick={handleAddToBag}>Add to Bag</button>
+            <button onClick={() => addToCart(productDetails)}>
+              Add to Bag
+            </button>
           </div>
         </div>
       </div>

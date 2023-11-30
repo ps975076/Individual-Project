@@ -390,3 +390,19 @@ button:hover {
   cursor: pointer;
   border-radius: 20px;
 }
+.cart-product-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.no-cart-items {
+  text-align: center;
+  margin-top: 40px;
+}
+.total-price {
+  padding: 25px;
+  background-color: #ccc;
+  text-align: end;
+  margin-top: 40px;
+}

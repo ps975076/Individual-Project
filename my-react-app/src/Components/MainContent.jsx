@@ -21,6 +21,9 @@ function MainContent() {
             </div>
           </div>
         ))}
+        {products.length === 0 && (
+          <h1 className="no-cart-product">No product</h1>
+        )}
       </div>
       <div className="empty-right-col"></div>
     </main>

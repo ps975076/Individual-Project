@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProductsContext from "../ContextAPI/ProductsProvider";
 
 function HeaderNavBar() {
-  const { cartItems } = useContext(ProductsContext);
+  const { cartItems, search } = useContext(ProductsContext);
 
   return (
     <header className="header">
@@ -41,7 +41,12 @@ function HeaderNavBar() {
           </div>
         </div>
         <div className="searchBar">
-          <input className="searchInput" type="text" placeholder="Search" />
+          <input
+            className="searchInput"
+            type="text"
+            placeholder="Search"
+            onChange={(e) => search(e.target.value.trim().toLowerCase())}
+          />
         </div>
         <div className="favs">
           <img src="/src/assets/heart-svgrepo-com (3).svg" alt="favs" />

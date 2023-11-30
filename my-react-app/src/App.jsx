@@ -10,9 +10,9 @@ import { ProductsProvider } from "./ContextAPI/ProductsProvider";
 
 function App() {
   return (
-    <ProductsProvider>
-      <div className="container">
-        <BrowserRouter>
+    <BrowserRouter>
+      <ProductsProvider>
+        <div className="container">
           <HeaderNavBar />
 
           <Routes>
@@ -21,9 +21,9 @@ function App() {
             <Route path="/details/:id" element={<DetailsPage />} />
           </Routes>
           <Footer />
-        </BrowserRouter>
-      </div>
-    </ProductsProvider>
+        </div>
+      </ProductsProvider>
+    </BrowserRouter>
   );
 }
 
