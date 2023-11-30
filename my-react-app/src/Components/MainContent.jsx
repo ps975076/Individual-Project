@@ -16,7 +16,7 @@ function MainContent() {
             </Link>
             <div className="product-info">
               <p>{product.title}</p>
-              <p>Price: ${product.price.toFixed(2)}</p>
+              <p>Price: £{product.price.toFixed(2)}</p>
               <button onClick={() => addToCart(product)}>Add to Bag</button>
             </div>
           </div>

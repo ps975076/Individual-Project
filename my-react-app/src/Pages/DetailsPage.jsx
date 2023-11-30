@@ -31,7 +31,7 @@ function DetailsPage() {
           <div className="productDet-info">
             <h1>{productDetails.title}</h1>
             <p>Description: {productDetails.description}</p>
-            <p>Price: ${productDetails.price}</p>
+            <p>Price: £{productDetails.price}</p>
 
             <button onClick={() => addToCart(productDetails)}>
               Add to Bag

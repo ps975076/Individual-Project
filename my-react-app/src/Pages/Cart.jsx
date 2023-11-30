@@ -16,7 +16,7 @@ function Cart() {
             </div>
             <div className="cart-product-info">
               <h3>{p.title}</h3>
-              <p>Unit Price: ${p.price}</p>
+              <p>Unit Price: £{p.price.toFixed(2)}</p>
               <div className="counter">
                 <button className="count-btn" onClick={() => decreaseQty(p)}>
                   -
@@ -33,7 +33,7 @@ function Cart() {
               </div>
             </div>
             <div className="cart-product-action">
-              <p>Price: ${p.price * p.qty}</p>
+              <p>Price: £{p.price * p.qty.toFixed(2)}</p>
               <button onClick={() => removeItem(p)}>Remove</button>
             </div>
           </div>
@@ -45,7 +45,7 @@ function Cart() {
         )}
         <div className="total-price">
           <h2>
-            Total: $
+            Total: £
             {cartItems
               .reduce((t, item) => t + item.price * item.qty, 0)
               .toFixed(2)}
